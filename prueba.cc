@@ -29,4 +29,4 @@ int main(){
 
 }
 
-//Comentario de prueba pata gitlens
+//Comentario de prueba para gitlens
