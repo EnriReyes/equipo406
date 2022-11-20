@@ -28,3 +28,5 @@ int main(){
     std::cout<< c.get_id()<<" "<<c.get_descripcion()<<" "<<c.get_fecha_inicio()<<" "<<c.get_fecha_final()<<" "<<c.get_aforo()<<std::endl;
 
 }
+
+//Comentario de prueba pata gitlens
