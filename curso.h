@@ -1,5 +1,5 @@
 #ifndef CURSO_H
-#define CURSO
+#define CURSO_H
 
 #include <string>
 #include <vector>
@@ -11,7 +11,7 @@ class Curso{
         std::vector<int> valoracion_;
         std::vector<std::string> ponentes_;
         int aforo_;
-        std::list<int> participantes_, lista_espera_;
+        std::list<std::string> participantes_, lista_espera_;
     public:
         Curso(std::string id, std::string descripcion = "", std::string fecha_inicio = "", 
                 std::string fecha_final ="", int aforo = 0): id_(id), descripcion_(descripcion),
@@ -25,13 +25,19 @@ class Curso{
         inline void set_valoracion(const std::vector<int> &valoracion){valoracion_=valoracion;}
         inline void set_id(const std::string &id){id_=id;}
         inline void set_aforo(int aforo){aforo_=aforo;}
-        inline void set_participantes(const std::list<int> &participantes){participantes_=participantes;}
-        inline void set_lista_espera(const std::list<int> &lista_espera){lista_espera_=lista_espera;}
+        inline void set_participantes(const std::list<std::string> &participantes){participantes_=participantes;}
+        inline void set_lista_espera(const std::list<std::string> &lista_espera){lista_espera_=lista_espera;}
 
         inline std::string get_descripcion()const{return descripcion_;}
         inline std::string get_fecha_inicio()const{return fecha_inicio_;}
         inline std::string get_fecha_final()const{return fecha_final_;}
         inline std::string get_id()const{return id_;}
         inline int get_aforo()const{return aforo_;}
+        inline std::vector<int> get_valoracion()const{return valoracion_;}
+
+        inline int get_size_participantes()const{return participantes_.size();}
+        inline int get_size_espera()const{return lista_espera_.size();}
+        inline std::list<std::string> get_lista_participantes()const{return participantes_;}
+        inline std::list<std::string> get_lista_espera()const{return lista_espera_;}
 };
 #endif
