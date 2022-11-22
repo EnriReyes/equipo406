@@ -1,5 +1,5 @@
-#ifndef _PARTICIPANTE_
-#define _PARTICIPANTE_
+#ifndef PARTICIPANTE_H
+#define PARTICIPANTE_H
 
 #include <iostream>
 #include <string>
