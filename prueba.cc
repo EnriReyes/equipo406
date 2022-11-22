@@ -1,5 +1,7 @@
 #include "curso.h"
+#include "participante.h"
 #include "iostream"
+#include "UsuarioReg.h"
 
 int main(){
     std::string aux;
@@ -26,6 +28,15 @@ int main(){
     c.set_aforo(i);
 
     std::cout<< c.get_id()<<" "<<c.get_descripcion()<<" "<<c.get_fecha_inicio()<<" "<<c.get_fecha_final()<<" "<<c.get_aforo()<<std::endl;
+
+
+    Participante participante("122212", "Pepe Pepe Pepe", "prueba@gmail.com", "participante", 1);
+
+    std::cout << participante.get_dni()<<" "<<participante.get_email()<<" "<<participante.get_nombrecompleto()<<" "<< participante.get_uco_login() <<std::endl;
+    
+    
+    participante.valorar_curso(c, 10);
+    std::cout << c.get_valoracion()[0];
 
 }
 
