@@ -10,6 +10,7 @@ int main(){
     std::cout<<"Inserte el nombre del curso.\n";
     getline(std::cin, aux);
     Curso c(aux);
+    std::cout << c.get_size_participantes() << std::endl;
 
     std::cout<<"Inserte la descripcion del curso.\n";
     getline(std::cin, aux);
@@ -37,6 +38,9 @@ int main(){
     
     participante.valorar_curso(c, 10);
     std::cout << c.get_valoracion()[0] << std::endl;
+
+    participante.inscribirse_curso(c);
+    std::cout << c.get_size_participantes() << std::endl;
 
 }
 
