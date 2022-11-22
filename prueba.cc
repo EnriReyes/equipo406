@@ -36,7 +36,7 @@ int main(){
     
     
     participante.valorar_curso(c, 10);
-    std::cout << c.get_valoracion()[0];
+    std::cout << c.get_valoracion()[0] << std::endl;
 
 }
 
