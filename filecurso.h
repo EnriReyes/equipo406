@@ -11,7 +11,7 @@ class File_curso{
         bool guardar_curso(Curso c);
         bool leer_curso(Curso &c);
         void borrar_curso(std::string id);
-        std::vector<Curso> get_vector_cursos();
+        std::vector<std::string> get_vector_cursos();
 };
 
 

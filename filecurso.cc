@@ -90,18 +90,35 @@ bool File_curso::leer_curso(Curso &c){
 }
 
 void File_curso::borrar_curso(std::string id){
+    std::vector<std::string> v;
+    std::ifstream file("Archivo_main.txt");
+    std::string aux;
+
+    while(!file.eof()){
+        getline(file, aux);
+        if(aux!=id) v.push_back(aux);
+    }
+    file.close();
+    remove("Archivo_main.txt");
+
+    std::ofstream file1("Archivo_main.txt");
+    for(int i=0;i<v.size(); i++){
+        file1<<v[i];
+    }
+    file1.close();
+
     id+=".txt";
     //Se debe hacer esto, porque la función recibe un argumento de tipo char* y .str() devuelve un const char*
     remove(id.c_str());
 }
 
-std::vector<Curso> File_curso::get_vector_cursos(){
-    std::vector<Curso> v;
+std::vector<std::string> File_curso::get_vector_cursos(){
+    std::vector<std::string> v;
     std::ifstream file("Archivo_main.txt");
     std::string aux;
 
     while(!file.eof()){
-        getline(file, aux),
+        getline(file, aux);
         v.push_back(aux);
     }
     return v;
