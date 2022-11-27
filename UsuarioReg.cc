@@ -6,7 +6,7 @@
 #include "curso.h"
 
 
-void UsuarioReg::ver_curso(class curso c){
+void UsuarioReg::ver_curso(class Curso c){
     std::vector<int> v = c.get_valoracion();
     int nEle = v.size();
     int suma, media =0;
@@ -15,22 +15,9 @@ void UsuarioReg::ver_curso(class curso c){
     }
     media = (suma/nEle);
 
-    std::string aux;
-    std::vector<std::string> vp = c.get_ponentes();
-    nEle = vp.size();
-    for (int j=0; j<nEle; j++){
-        aux = vp[j];
-        if(j=0){
-        std::cout << "Este curso tiene asignado como ponente a "<< aux << "." << std::endl;
-        }
-        else{
-        std::cout << "A " << aux << "." << std::endl;
-        }
-    }
-
     std::cout << "La id del curso es " << c.get_id() << "." << std::endl;
     std::cout << "La descripción del curso es " << c.get_descripcion() << "." << std::endl;
-    std::cout << "La fecha de inicio es "<< c.get_fecha_inicio << ", y la fecha de finalización es "<< c.get_fecha_final() << "." << std::endl;
+    std::cout << "La fecha de inicio es "<< c.get_fecha_inicio() << ", y la fecha de finalización es "<< c.get_fecha_final() << "." << std::endl;
     std::cout << "La valoración media del curso es " << media << "." << std::endl;
     std::cout << "El aforo del curso es " << c.get_aforo() << "." << std::endl;
 
