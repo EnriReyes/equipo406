@@ -1,6 +1,6 @@
 #ifndef USUARIOREG_H
 #define USUARIOREG_H
-
+#include "curso.h"
 #include <string>
 
 class UsuarioReg{
