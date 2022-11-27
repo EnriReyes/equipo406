@@ -22,7 +22,8 @@ inline std::string get_nombrecompleto()const{return nombrecompleto_;}
 inline std::string get_email()const{return email_;}
 inline std::string get_uco_login()const{return uco_login_;}
 inline int get_id()const{return id_;}
+//Funciones
+void ver_curso(class curso c)
 };
-
 
 #endif

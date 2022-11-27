@@ -17,7 +17,7 @@ int id);
     void inscribirse_curso(Curso &curso);};
 
 
-
+void ver_curso
 #endif
 
 //prueba
