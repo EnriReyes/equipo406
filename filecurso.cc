@@ -27,7 +27,6 @@ bool File_curso::guardar_curso(Curso c){
 
     std::list<std::string> v = c.get_lista_participantes();
     std::vector<int> v1 = c.get_valoracion();
-
     if(v.empty()){
         return true;
     }
@@ -130,7 +129,7 @@ void File_curso::borrar_curso(std::string id){
     file1.close();
 
     id+=".txt";
-    //Se debe hacer esto, porque la función recibe un argumento de tipo char* y .str() devuelve un const char*
+    //Se debe hacer esto, porque la función recibe un argumento de tipo char* y .str() devuelve un const char* a
     remove(id.c_str());
 }
 
