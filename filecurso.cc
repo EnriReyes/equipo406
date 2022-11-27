@@ -129,7 +129,7 @@ void File_curso::borrar_curso(std::string id){
     file1.close();
 
     id+=".txt";
-    //Se debe hacer esto, porque la función recibe un argumento de tipo char* y .str() devuelve un const char* a
+    //Se debe hacer esto, porque la función recibe un argumento de tipo char* y .str() devuelve un const char* b
     remove(id.c_str());
 }
 

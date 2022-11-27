@@ -1,5 +1,5 @@
-#ifndef PARTICIPANTE_H
-#define PARTICIPANTE_H
+#ifndef _PARTICIPANTE_
+#define _PARTICIPANTE_
 
 #include <iostream>
 #include <string>
@@ -17,7 +17,7 @@ int id);
     void inscribirse_curso(Curso &curso);};
 
 
-
+void ver_curso
 #endif
 
 //prueba
