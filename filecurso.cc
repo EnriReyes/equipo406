@@ -9,12 +9,20 @@ bool File_curso::guardar_curso(Curso c){
     std::string dni;
     std::string aux = c.get_id();
     aux += ".txt";
+    int i =0;
     std::ofstream file(aux);
     if(!file){
        return false;
     }
 
-    file << c.get_descripcion()<<"\n"<<c.get_fecha_inicio()<<"\n"<<c.get_fecha_final()<<"\n"<<c.get_aforo()<<std::endl;
+    file << c.get_descripcion()<<"\n"<<c.get_fecha_inicio()<<"\n"<<c.get_fecha_final()<<"\n";
+    
+    std::vector<std::string> v3 = c.get_ponentes();
+    for ( i = 0; i < 3; i++)
+    {
+        file<<v3[i]<<std::endl;
+    }
+    file<<c.get_aforo()<<std::endl;
     file<< c.get_size_participantes() << " " << c.get_size_espera() << std::endl;
 
     std::list<std::string> v = c.get_lista_participantes();
@@ -24,7 +32,7 @@ bool File_curso::guardar_curso(Curso c){
         return true;
     }
     else{
-        int i =0;
+        i =0;
         for(auto list = v.begin(); list!=v.end(); list++){
         file<< *list <<"\n" << v1[i]<< std::endl;
         i++;
@@ -64,6 +72,20 @@ bool File_curso::leer_curso(Curso &c){
 
     getline(file, aux1);
     c.set_fecha_final(aux1);
+
+    //Leemos los ponentes
+    std::vector<std::string> v3;
+    for ( int i = 0; i < 3; i++)
+    {
+        getline(file, aux1);
+        v3.push_back(aux1);
+    }
+    c.set_ponentes(v3);
+
+    int aforo;
+    file >> aforo;
+    c.set_aforo(aforo);
+
     //Leemos el tamano de las listas de espera y participantes del curso
     int a, b, valor;
     file >> a >> b;

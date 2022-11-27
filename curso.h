@@ -39,5 +39,6 @@ class Curso{
         inline int get_size_espera()const{return lista_espera_.size();}
         inline std::list<std::string> get_lista_participantes()const{return participantes_;}
         inline std::list<std::string> get_lista_espera()const{return lista_espera_;}
+        inline std::vector<std::string> get_ponentes()const{return ponentes_;}
 };
 #endif
