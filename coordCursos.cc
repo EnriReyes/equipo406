@@ -2,7 +2,7 @@
 #include "curso.h"
 #include <iostream>
 
-void administrar_ponentes(Curso curso){
+void CoordCursos::administrar_ponentes(Curso curso){
     std::vector<std::string> v = curso.get_ponentes();
     std::string aux;
 
@@ -24,7 +24,7 @@ void administrar_ponentes(Curso curso){
 
 }
 
-void administrar_descp(Curso curso){
+void CoordCursos::administrar_descp(Curso curso){
     int i=0;
     std::string aux;
 
@@ -74,7 +74,7 @@ void administrar_descp(Curso curso){
     }
 }
 
-bool buscar_alumno(Curso curso, std::string alumno){
+bool CoordCursos::buscar_alumno(Curso curso, std::string alumno){
     std::list<std::string> p = curso.get_lista_participantes();
     for(auto list = p.begin(); list!=p.end(); list++){
         if((*list)==alumno){
