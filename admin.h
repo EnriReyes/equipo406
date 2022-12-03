@@ -1,7 +1,8 @@
 #ifndef ADMIN_H
 #define ADMIN_H
 
-class Admin{
+#include "coordCursos.h"
+class Admin: public CoordCursos{
 
     public:
     bool crear_curso();
