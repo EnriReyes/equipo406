@@ -55,6 +55,8 @@ int main(){
     File_Login login;
     std::cout << login.buscar_usuario("prueba", "prueba2");
     std::cout << login.buscar_usuario("oaoaoa", "a");
+    std::cout << login.buscar_usuario("aaa", "prueba2");
+
 }
 
 //Comentario de prueba para gitlens
