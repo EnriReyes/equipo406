@@ -3,6 +3,7 @@
 #include "iostream"
 #include "UsuarioReg.h"
 #include "filecurso.h"
+#include "filelogin.h"
 
 int main(){
     std::string aux;
@@ -51,6 +52,9 @@ int main(){
     participante.inscribirse_curso(c);
     std::cout << c.get_size_participantes() << std::endl;
 
+    File_Login login;
+    std::cout << login.buscar_usuario("prueba", "prueba2");
+    std::cout << login.buscar_usuario("oaoaoa", "a");
 }
 
 //Comentario de prueba para gitlens
