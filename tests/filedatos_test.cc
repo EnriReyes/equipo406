@@ -1,5 +1,5 @@
 #include "filedatos.h"
-#include "UsuarioReg.h"
+#include "usuarioReg.h"
 #include <iostream>
 #include <fstream>
 #include <string>

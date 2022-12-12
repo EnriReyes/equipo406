@@ -9,15 +9,13 @@
 class Participante: public UsuarioReg{
     public:
     Participante(std::string dni,
-std::string nombrecompleto,
-std::string email,
-std::string uco_login,
-int id);
+                    std::string nombrecompleto,
+                    std::string email,
+                    std::string uco_login,
+                    int id):UsuarioReg(dni, nombrecompleto, email, uco_login, id){}
     void valorar_curso(Curso &curso, int valoracion);
-    void inscribirse_curso(Curso &curso);};
-
-
-void ver_curso
+    void inscribirse_curso(Curso &curso);
+};
 #endif
 
 //prueba

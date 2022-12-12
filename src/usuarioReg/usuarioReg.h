@@ -13,8 +13,7 @@ UsuarioReg(std::string dni,
 std::string nombrecompleto,
 std::string email,
 std::string uco_login,
-int id
-): dni_(dni), nombrecompleto_(nombrecompleto),
+int id): dni_(dni), nombrecompleto_(nombrecompleto),
  email_(email), uco_login_(uco_login), id_(id){}
 //Observadores
 inline std::string get_dni()const{return dni_;}

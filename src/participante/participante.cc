@@ -1,15 +1,10 @@
 #include <string>
+#include "usuarioReg.h"
 #include "participante.h"
 #include <vector>
 #include "curso.h"
-#include "usuarioReg.h"
 
 
-Participante::Participante(std::string dni,
-std::string nombrecompleto,
-std::string email,
-std::string uco_login,
-int id):UsuarioReg(dni, nombrecompleto, email, uco_login, id){};
 
 void Participante::valorar_curso(Curso &curso, int valoracion){
     auto val = curso.get_valoracion();
