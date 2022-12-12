@@ -1,7 +1,7 @@
 #ifndef COORDCURSOS_H
 #define COORDCURSOS_H
 #include "curso.h"
-#include "UsuarioReg.h"
+#include "usuarioReg.h"
 
 
 class CoordCursos: public UsuarioReg{

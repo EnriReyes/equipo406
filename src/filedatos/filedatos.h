@@ -1,6 +1,6 @@
 #ifndef FILEDATOS_H
 #define FILEDATOS_H
-#include "UsuarioReg.h"
+#include "usuarioReg.h"
 #include <string>
 
 class File_datos{

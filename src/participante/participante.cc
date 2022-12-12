@@ -2,7 +2,7 @@
 #include "participante.h"
 #include <vector>
 #include "curso.h"
-#include "UsuarioReg.h"
+#include "usuarioReg.h"
 
 
 Participante::Participante(std::string dni,

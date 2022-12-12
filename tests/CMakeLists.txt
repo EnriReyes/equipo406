@@ -12,7 +12,7 @@ target_link_libraries(GTest::GTest INTERFACE gtest_main)
 # End GTest include code 
 
 #Testing filedatos library
-add_executable(test_filedatos test_filedatos.cc)
+add_executable(filedatos_test filedatos_test.cc)
 target_link_libraries(filedatos_test
 PRIVATE GTest::GTest filedatos)
 add_test(filedatos_gtests filedatos_test)

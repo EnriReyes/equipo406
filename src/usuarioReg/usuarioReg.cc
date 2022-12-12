@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <list>
-#include "UsuarioReg.h"
+#include "usuarioReg.h"
 #include "curso.h"
 
 

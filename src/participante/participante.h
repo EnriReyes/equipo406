@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 #include "curso.h"
-#include "UsuarioReg.h"
+#include "usuarioReg.h"
 
 class Participante: public UsuarioReg{
     public:
