@@ -14,6 +14,6 @@ target_link_libraries(GTest::GTest INTERFACE gtest_main)
 #Testing filedatos library
 add_executable(filedatos_test filedatos_test.cc)
 target_link_libraries(filedatos_test
-PRIVATE GTest::GTest filedatos)
+PRIVATE GTest::GTest filedatos usuarioReg)
 add_test(filedatos_gtests filedatos_test)
 #

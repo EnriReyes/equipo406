@@ -1,26 +1,21 @@
 #include "filedatos.h"
 #include "usuarioReg.h"
-#include <iostream>
-#include <fstream>
-#include <string>
 #include "gtest/gtest.h"
 
 
 
-TEST(filedatos, filedatos_obtener_datos) {
-  std::string dni="31020644S";
+TEST(Filedatos, filedatos_obtener_datos) {
   UsuarioReg aux(" ", " ", " ", " ", 0);
   File_datos fd;
-  aux=fd.obtener_datos(dni);
+  aux=fd.obtener_datos("31020644S");
 
-  
-  EXPECT_EQ("31020644S", aux.get_dni());
-  EXPECT_EQ("Pepe Federico García", aux.get_nombrecompleto());
-  EXPECT_EQ("login", aux.get_uco_login());
-  EXPECT_EQ("mail@mail.mail", aux.get_email());
-  EXPECT_EQ("10", aux.get_id());
-
+  EXPECT_EQ("31020644S",aux.get_dni());
+  EXPECT_EQ("Pepe Federico García",aux.get_nombrecompleto());
+  EXPECT_EQ("mail@mail.mail",aux.get_email());
+  EXPECT_EQ("login",aux.get_uco_login());
+  EXPECT_EQ(10,aux.get_id());
 }
+
 
 int main(int argc, char** argv)
 {
