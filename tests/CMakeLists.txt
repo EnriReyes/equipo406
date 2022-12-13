@@ -17,3 +17,9 @@ target_link_libraries(filedatos_test
 PRIVATE GTest::GTest filedatos usuarioReg)
 add_test(filedatos_gtests filedatos_test)
 #
+#Testing usuarioreg library
+add_executable(usuarioReg_test usuarioReg_test.cc)
+target_link_libraries(usuarioReg_test
+PRIVATE GTest::GTest usuarioReg)
+add_test(usuarioReg_gtests usuarioReg_test)
+#
