@@ -13,14 +13,27 @@ void Participante::valorar_curso(Curso &curso, int valoracion){
     
 }
 void Participante::inscribirse_curso(Curso &curso){
-    if(curso.get_aforo()==curso.get_size_participantes()){
-        auto lista = curso.get_lista_espera();
-        lista.push_back(get_dni());
-        curso.set_lista_espera(lista);
+    auto v= curso.get_lista_participantes();
+    int a=0;
+    for(auto list = v.begin(); list!=v.end(); list++){
+        if(get_dni()==*list){
+            a=1;
+            std::cout<<"ERROR, usuario ya inscrito\n";
+            break;
+        }
     }
-    else{
-        auto lista = curso.get_lista_participantes();
-        lista.push_back(get_dni());
-        curso.set_participantes(lista);
+    if(a!=1){
+        if(curso.get_aforo()==curso.get_size_participantes()){
+            auto lista = curso.get_lista_espera();
+            lista.push_back(get_dni());
+            curso.set_lista_espera(lista);
+            std::cout<<"Lista de participantes llena, entrando en lista de espera\n";
+        }
+        else{
+            auto lista = curso.get_lista_participantes();
+            lista.push_back(get_dni());
+            curso.set_participantes(lista);
+            std::cout<<"Usuario inscrito de forma satisfactoria\n";
+        }
     }
 }

@@ -4,6 +4,8 @@
 #include "filecurso.h"
 #include "filelogin.h"
 #include "admin.h"
+#include "participante.h"
+#include "curso.h"
 
 void registrarse(UsuarioReg &usuario ){
     int i = 0, j, z;
@@ -43,6 +45,83 @@ void registrarse(UsuarioReg &usuario ){
 
 }
 
+void visitar_curso(std::vector<std::string> v,UsuarioReg usuario){
+    int j, i=0, z;
+    File_curso f;
+    Curso c;
+    
+    std::cout<<"\n\n\n\n\n\n\n\n";
+
+    std::cout<<"Cursos disponibles\n";
+    for(int i=0; i<v.size(); i++){
+        std::cout<<i+1<<". "<<v[i]<<std::endl;
+    }
+
+    std::cout<<"Introduzca el numero del curso que desee visitar\n";
+    std::cin>>j;
+
+    c.set_id(v[j-1]);
+    f.leer_curso(c);
+    usuario.ver_curso(c);
+
+     while(i==0){
+        std::cout<<"Que desea realizar?\n";
+        if(usuario.get_id()==2 || usuario.get_id()==1){
+            std::cout<<"2. Buscar un alumno\n3. Editar descripción\n4.";
+            j=4;
+        }
+        else{
+            std::cout<<"1. Inscribirse en el curso.\n";
+            std::cout<<"2. Valorar curso.\n";
+            j=3;
+        }
+        std::cout<<j<<". "<<"Salir del curso\n";
+        std::cin>>z;
+        std::cin.ignore(1,'\n');
+        if(usuario.get_id()==0 || usuario.get_id()==1){
+            Participante p(usuario.get_dni(), usuario.get_nombrecompleto(),
+                                    usuario.get_email(), usuario.get_uco_login(), usuario.get_id());
+            switch(z){
+                case 1:
+                    p.inscribirse_curso(c);
+                break;
+                case 2:
+                    int val;
+                    std::cout<<"Inserte valoración del curso (del 1 al 10 y numeros enteros)\n";
+                    std::cin>>val;
+                    p.valorar_curso(c, val);
+                case 3:
+                    std::cout<<"Saliendo del curso...\n";
+                break;
+                default:
+                    std::cout<<"Opción indicada no existe\n\n\n\n\n\n\n\n";
+                break;
+            }
+        }
+        else{
+            switch(z){
+                case 1:
+                    std::cout<<"Holo\n\n\n\n\n\n\n\n";
+                break;
+                case 2:
+                    std::cout<<"Borrar curso\n\n\n\n\n\n\n\n";
+                break;
+                case 3:
+                    std::cout<<"Crear curso\n\n\n\n\n\n\n\n";
+                break;
+                case 4:
+                    std::cout<<"Saliendo del sistema...\n\n\n\n\n\n\n\n";
+                    i=1;
+                break;
+                default:
+                    std::cout<<"Opción indicada no existe\n\n\n\n\n\n\n\n";
+                break;
+            }
+        }
+    }
+
+}
+
 int main(){
     UsuarioReg usuario;
     File_curso c;
@@ -69,7 +148,7 @@ int main(){
         if(usuario.get_id()!=2){
             switch(z){
                 case 1:
-                    std::cout<<"Holo\n";
+                    visitar_curso(v, usuario);
                 break;
                 case 2:
                     std::cout<<"Saliendo del sistema...\n\n\n\n\n\n\n\n";

@@ -13,7 +13,7 @@ class Curso{
         int aforo_;
         std::list<std::string> participantes_, lista_espera_;
     public:
-        Curso(std::string id, std::string descripcion = "", std::string fecha_inicio = "", 
+        Curso(std::string id="", std::string descripcion = "", std::string fecha_inicio = "", 
                 std::string fecha_final ="", int aforo = 0): id_(id), descripcion_(descripcion),
                                                             fecha_inicio_(fecha_inicio), fecha_final_(fecha_final),
                                                             aforo_(aforo){}

@@ -14,7 +14,9 @@ void UsuarioReg::ver_curso(class Curso c){
     for (int i=0; i<nEle ; i++){
         suma = suma + v[i];
     }
-    media = (suma/nEle);
+    if(v.size()!=0){
+        media = (suma/nEle);
+    }
 
     std::cout << "La id del curso es " << c.get_id() << "." << std::endl;
     std::cout << "La descripción del curso es \n" << c.get_descripcion() << "." << std::endl;
