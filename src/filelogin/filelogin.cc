@@ -9,7 +9,7 @@ int File_Login::buscar_usuario(std::string nombre, std::string password){
     if(!file){
        return 0;
     }
-    for ( int i = 0; i < 3; i++)
+    while(!file.eof())
     {
         getline(file, aux);
         if(aux == nombre){
