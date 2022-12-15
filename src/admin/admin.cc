@@ -65,7 +65,9 @@ bool Admin::crear_curso(){
     if(!file1){
        return false;
     }
-    for(int i=0;i<v.size(); i++){
+    file1<<v[0];
+    for(int i=1;i<v.size(); i++){
+        file1<<"\n";
         file1<<v[i];
     }
     file1.close();

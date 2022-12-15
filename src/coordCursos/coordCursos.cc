@@ -2,7 +2,7 @@
 #include "curso.h"
 #include <iostream>
 
-void CoordCursos::administrar_ponentes(Curso curso){
+void CoordCursos::administrar_ponentes(Curso &curso){
     std::vector<std::string> v = curso.get_ponentes();
     std::string aux;
 
@@ -24,7 +24,7 @@ void CoordCursos::administrar_ponentes(Curso curso){
 
 }
 
-void CoordCursos::administrar_descp(Curso curso){
+void CoordCursos::administrar_descp(Curso &curso){
     int i=0;
     std::string aux;
 
@@ -35,6 +35,7 @@ void CoordCursos::administrar_descp(Curso curso){
         std::cout << "3.Actualizar fecha final del curso.txt.\n";
         std::cout << "4.Volver al curso.\n";
         std::cin >> i;
+        std::cin.ignore(1,'\n');
         switch (i)
         {
         case 1:
@@ -50,7 +51,7 @@ void CoordCursos::administrar_descp(Curso curso){
             std::cout<<"Anterior fecha de inicio del curso era:\n"<<curso.get_fecha_inicio()<<std::endl;
             std::cout<<"Introduce la nueva fecha de inicio: ";
             getline(std::cin, aux);
-            curso.set_descripcion(aux);
+            curso.set_fecha_inicio(aux);
             std::cout<<"Cambios realizados.\n";
             break;
         break;
@@ -58,7 +59,7 @@ void CoordCursos::administrar_descp(Curso curso){
             std::cout<<"Anterior fecha de finalizacion era\n:"<<curso.get_fecha_inicio()<<std::endl;
             std::cout<<"Introduce la nueva fecha de finalizacion: ";
             getline(std::cin, aux);
-            curso.set_descripcion(aux);
+            curso.set_fecha_final(aux);
             std::cout<<"Cambios realizados.\n";
             break;
         break;

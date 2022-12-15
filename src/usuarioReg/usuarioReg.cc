@@ -25,7 +25,7 @@ void UsuarioReg::ver_curso(class Curso c){
     std::cout << "El aforo del curso es " << c.get_aforo() << "." << std::endl;
 
     std::list<std::string> l_participantes = c.get_lista_participantes();
-    std::list<std::string> l_lista_espera = c.get_lista_participantes();
+    std::list<std::string> l_lista_espera = c.get_lista_espera();
 
     std::list<std::string>::iterator i;
     i=l_participantes.begin();
@@ -36,7 +36,7 @@ void UsuarioReg::ver_curso(class Curso c){
 
     std::list<std::string>::iterator i2;
     i2=l_lista_espera.begin();
-    std::cout << "El curso tiene "<< c.get_size_espera() << " participantes.\nLa lista de nombres es..." << std::endl;
+    std::cout << "El curso tiene "<< c.get_size_espera() << " participantes en lsta de espera.\nLa lista de nombres es..." << std::endl;
     for(i2; i2!=l_lista_espera.end(); ++i){
         std::cout << *i2 << std::endl;
     }
