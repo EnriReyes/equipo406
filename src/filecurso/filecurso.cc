@@ -26,7 +26,7 @@ bool File_curso::guardar_curso(Curso c){
     file<< c.get_size_participantes() << " " << c.get_size_espera();
 
     std::list<std::string> v = c.get_lista_participantes();
-    std::vector<int> v1 = c.get_valoracion();
+    std::map<std::string, int>v1 = c.get_valoracion();
     if(v.empty()){
         return true;
     }
@@ -34,8 +34,10 @@ bool File_curso::guardar_curso(Curso c){
         i =0;
         for(auto list = v.begin(); list!=v.end(); list++){
             file<<"\n";
-            v1.push_back(0);
-            file<< *list <<"\n" << v1[i];
+            if(v1.find(*list)==v1.end()){
+                v1[*list]=-1;
+            }
+            file<< *list <<"\n" << v1[*list];
             i++;
         }
 
@@ -47,8 +49,8 @@ bool File_curso::guardar_curso(Curso c){
         }
         else{
             for(auto list = v.begin(); list!=v.end(); list++){
-                file<< *list <<" ";
-                i++;
+                file<<"\n";
+                file<< *list;
             }
         }
     return true;
@@ -90,16 +92,15 @@ bool File_curso::leer_curso(Curso &c){
     //Leemos el tamano de las listas de espera y participantes del curso
     int a, b, valor;
     file >> a >> b;
-    std::cout<<"valor de a y de b: "<<a<<" "<<b<<"\n";
     std::list<std::string> lista;
-    std::vector<int> valoracion; 
+    std::map<std::string, int> valoracion; 
     //Leemos la valoración y el dni de los participantes.
     getline(file, aux1);
     for(int i=0;i<a;i++){
         getline(file, aux1);
         file>> valor;
         lista.push_back(aux1);
-        valoracion.push_back(valor);
+        valoracion[aux1]=valor;
         getline(file, aux1);
     }
     c.set_participantes(lista);
@@ -122,7 +123,8 @@ void File_curso::borrar_curso(std::string id){
 
     while(!file.eof()){
         getline(file, aux);
-        if(aux!=id) {v.push_back(aux);
+        if(aux!=id) {
+            v.push_back(aux);
             std::cout<<v[i]<<"\n";
             i++;
         }

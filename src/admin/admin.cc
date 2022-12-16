@@ -6,7 +6,7 @@
 void Admin::borrar_curso(){
     File_curso f;
     std::string aux;
-    std::cout<<"Inserte el curso que desee borrar.\n";
+    std::cout<<"Inserte el nombre del curso que desee borrar.\n";
     getline(std::cin, aux);
 
     f.borrar_curso(aux);

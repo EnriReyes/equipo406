@@ -1,8 +1,12 @@
 Este es el curso de Matematicas del sistema
-12/10/2022
-01/03/2023
+12/11/2022
+01/04/2023
 Paco
 Luis
 Silvia
 4
-0 0
+2 0
+31020644S
+5
+51327644E
+-1

@@ -7,9 +7,22 @@
 
 
 void Participante::valorar_curso(Curso &curso, int valoracion){
-    auto val = curso.get_valoracion();
-    val.push_back(valoracion);
-    curso.set_valoracion(val);
+    int i = 0;
+    auto c = curso.get_lista_participantes();
+    for(auto i = c.begin(); i!=c.end();++i){
+        if(*i==get_dni()){
+            i++;
+            break;
+        }
+    }
+    if(i==1){
+        auto val = curso.get_valoracion();
+        val[get_dni()]=valoracion;
+        curso.set_valoracion(val);
+    }
+    else{
+        printf("ERROR, este usuario no esta inscrito en el curso\n");
+    }
     
 }
 void Participante::inscribirse_curso(Curso &curso){
@@ -24,6 +37,13 @@ void Participante::inscribirse_curso(Curso &curso){
     }
     if(a!=1){
         if(curso.get_aforo()==curso.get_size_participantes()){
+            v=curso.get_lista_espera();
+            for(auto list = v.begin(); list!=v.end(); list++){
+                if(get_dni()==*list){
+                    std::cout<<"ERROR, usuario ya inscrito en la lista de espera\n";
+                    return;
+                } 
+            }
             auto lista = curso.get_lista_espera();
             lista.push_back(get_dni());
             curso.set_lista_espera(lista);

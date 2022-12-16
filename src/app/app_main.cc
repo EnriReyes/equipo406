@@ -56,6 +56,7 @@ void registrarse(UsuarioReg &usuario ){
 }
 
 void visitar_curso(std::vector<std::string> v,UsuarioReg usuario){
+                        std::string aux556;
     int j, i=0, z;
     bool h;
     std::list<std::string> lista;
@@ -72,12 +73,17 @@ void visitar_curso(std::vector<std::string> v,UsuarioReg usuario){
 
     std::cout<<"Introduzca el numero del curso que desee visitar\n";
     std::cin>>j;
+    if(1>j||v.size()<j){
+        printf("Error, numero del curso incorrecto.\nSaliedo a la pagina anterior...\n");
+        return;
+    }
 
     c.set_id(v[j-1]);
     f.leer_curso(c);
 
      while(i==0){
         j=1;
+        std::cout<<"\n\n\n\n\n\n\n\n";
         usuario.ver_curso(c);
         std::cout<<"Que desea realizar?\n";
         if(usuario.get_id()==2 || usuario.get_id()==3){
@@ -92,6 +98,7 @@ void visitar_curso(std::vector<std::string> v,UsuarioReg usuario){
         std::cout<<j<<". "<<"Salir del curso\n";
         std::cin>>z;
         std::cin.ignore(1,'\n');
+        std::cout<<"\n\n\n\n\n\n\n\n";
         if(usuario.get_id()==-1){
             switch(z){
                 case 1:
@@ -109,7 +116,6 @@ void visitar_curso(std::vector<std::string> v,UsuarioReg usuario){
             switch(z){
                 case 1:
                     p.inscribirse_curso(c);
-                    int val1;
                 break;
                 case 2:
                     int val;
@@ -118,8 +124,9 @@ void visitar_curso(std::vector<std::string> v,UsuarioReg usuario){
                     p.valorar_curso(c, val);
                 break;
                 case 3:
-                    std::cout<<"Saliendo del curso...\n";
+                    std::cout<<"Saliendo del curso...";
                     i=1;
+                    std::cout<<"\n\n\n\n\n\n\n\n";
                 break;
                 default:
                     std::cout<<"Opción indicada no existe\n\n\n\n\n\n\n\n";
@@ -131,7 +138,11 @@ void visitar_curso(std::vector<std::string> v,UsuarioReg usuario){
                                     usuario.get_email(), usuario.get_uco_login(), usuario.get_id());
             switch(z){
                 case 1:
-                    if(c.get_lista_participantes().empty()==true)break;
+                    if(c.get_lista_participantes().empty()==true){
+                        std::cout<<"Error no hay ningún participante ingresado en el curso\n";
+                        break;
+                    }
+                    std::cout<<"Participantes inscritos:\n";
                     lista=c.get_lista_participantes();
                     for(auto i=lista.begin(); i!=lista.end(); ++i){
                         std::cout << *i << std::endl;
@@ -145,12 +156,13 @@ void visitar_curso(std::vector<std::string> v,UsuarioReg usuario){
                 break;
                 case 2:
                     a.administrar_descp(c);
+                    
                 break;
                 case 3:
                     a.administrar_ponentes(c);
                 break;
                 case 4:
-                    std::cout<<"Saliendo del sistema...\n\n\n\n\n\n\n\n";
+                    std::cout<<"Saliendo del curso...\n\n\n\n\n\n\n\n";
                     i=1;
                 break;
                 default:
@@ -158,7 +170,7 @@ void visitar_curso(std::vector<std::string> v,UsuarioReg usuario){
                 break;
             }
         }
-        std::cout<<"\n\n\n\n\n\n\n\n";
+        std::cout<<"\n\n\n\n";
     }
      f.guardar_curso(c);
 
@@ -175,13 +187,14 @@ int main(){
     registrarse( usuario ); 
     v=c.get_vector_cursos();
 
-    std::cout<<"Cursos disponibles\n";
-    for(int i=0; i<v.size(); i++){
-        std::cout<<i+1<<". "<<v[i]<<std::endl;
-    }
-    
     while(i==0){
-        std::cout<<"Que desea realizar?\n1. Visitar un curso\n";
+        v=c.get_vector_cursos();
+        std::cout<<"Cursos disponibles\n";
+        for(int i=0; i<v.size(); i++){
+            std::cout<<i+1<<". "<<v[i]<<std::endl;
+        }
+    
+        std::cout<<"\nQue desea realizar?\n1. Visitar un curso\n";
         if(usuario.get_id()==3){
             std::cout<<"2. Borrar un curso\n3. Crear un curso\n";
             j=4;
@@ -193,6 +206,7 @@ int main(){
             switch(z){
                 case 1:
                     visitar_curso(v, usuario);
+                    std::cout<<"\n\n\n\n\n\n\n\n";
                 break;
                 case 2:
                     std::cout<<"Saliendo del sistema...\n\n\n\n\n\n\n\n";
@@ -209,12 +223,15 @@ int main(){
             switch(z){
                 case 1:
                     visitar_curso(v, usuario);
+                    std::cout<<"\n\n\n\n\n\n\n\n";
                 break;
                 case 2:
                     a.borrar_curso();
+                    std::cout<<"\n\n\n\n\n\n\n\n";
                 break;
                 case 3:
                     a.crear_curso();
+                    std::cout<<"\n\n\n\n\n\n\n\n";
                 break;
                 case 4:
                     std::cout<<"Saliendo del sistema...\n\n\n\n\n\n\n\n";
