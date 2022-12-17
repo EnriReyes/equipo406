@@ -7,18 +7,19 @@
 
 
 void Participante::valorar_curso(Curso &curso, int valoracion){
-    int i = 0;
+    int j = 0;
     auto c = curso.get_lista_participantes();
     for(auto i = c.begin(); i!=c.end();++i){
         if(*i==get_dni()){
-            i++;
+            j++;
             break;
         }
     }
-    if(i==1){
+    if(j==1){
         auto val = curso.get_valoracion();
         val[get_dni()]=valoracion;
         curso.set_valoracion(val);
+        std::cout<<"Valoracion realizada con exito\n";
     }
     else{
         printf("ERROR, este usuario no esta inscrito en el curso\n");

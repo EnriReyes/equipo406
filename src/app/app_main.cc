@@ -57,7 +57,7 @@ void registrarse(UsuarioReg &usuario ){
 
 void visitar_curso(std::vector<std::string> v,UsuarioReg usuario){
                         std::string aux556;
-    int j, i=0, z;
+    int j, i=0, z, aux34=1;
     bool h;
     std::list<std::string> lista;
     File_curso f;
@@ -119,8 +119,14 @@ void visitar_curso(std::vector<std::string> v,UsuarioReg usuario){
                 break;
                 case 2:
                     int val;
-                    std::cout<<"Inserte valoración del curso (del 1 al 10 y numeros enteros)\n";
-                    std::cin>>val;
+                    while(aux34==1){
+                        std::cout<<"Inserte valoración del curso (del 1 al 10 y numeros enteros)\n";
+                        std::cin>>val;
+                        if(val>10||val<0){
+                            std::cout<<"ERROR, valor insertado no comprendido en el intervalo [0,10]\n";
+                        }
+                        else aux34=0;
+                    }
                     p.valorar_curso(c, val);
                 break;
                 case 3:

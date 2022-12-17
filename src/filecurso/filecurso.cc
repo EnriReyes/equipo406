@@ -129,6 +129,11 @@ void File_curso::borrar_curso(std::string id){
             i++;
         }
     }
+    std::vector<std::string> v2 =get_vector_cursos();
+    if(v2.size()==v.size()) {
+        std::cout<<"ERROR, el curso seleccionado no existe.\n";
+        return;
+    }
     file.close();
     remove("Archivo_main.txt");
 
