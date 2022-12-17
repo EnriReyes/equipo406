@@ -19,7 +19,6 @@ int File_Login::buscar_usuario(std::string nombre, std::string password){
             }
             return -1;
         }
-        getline(file, aux);
     }
     return 0;
 }

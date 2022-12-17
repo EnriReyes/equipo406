@@ -25,7 +25,7 @@ void registrarse(UsuarioReg &usuario ){
     std::cout<<"Bienvenido al sistema de gestion de cursos de extension de la universidad de Cordoba\n";
 
     while(i==0){
-        std::cout<<"Que desea realizar?\n1. Ingresar como visitante\n2. Regstrarse\n";
+        std::cout<<"Que desea realizar?\n1. Ingresar como visitante\n2. Registrarse\n";
         std::cin>>j;
         std::cin.ignore(1,'\n');
         switch(j){

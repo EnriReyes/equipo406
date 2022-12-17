@@ -13,7 +13,7 @@ TEST(Filedatos, filedatos_obtener_datos) {
   EXPECT_EQ("Pepe Federico García",aux.get_nombrecompleto());
   EXPECT_EQ("mail@mail.mail",aux.get_email());
   EXPECT_EQ("login",aux.get_uco_login());
-  EXPECT_EQ(10,aux.get_id());
+  EXPECT_EQ(1,aux.get_id());
 }
 
 
