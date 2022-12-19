@@ -1,10 +1,10 @@
-Start testing: Dec 19 14:25 CET
+Start testing: Dec 19 14:52 CET
 ----------------------------------------------------------
 1/4 Testing: filedatos_gtests
 1/4 Test: filedatos_gtests
 Command: "/home/javier/Escritorio/equipo406-1/build/tests/filedatos_test"
 Directory: /home/javier/Escritorio/equipo406-1/build/tests
-"filedatos_gtests" start time: Dec 19 14:25 CET
+"filedatos_gtests" start time: Dec 19 14:52 CET
 Output:
 ----------------------------------------------------------
 [==========] Running 1 test from 1 test suite.
@@ -23,7 +23,7 @@ Usuario Encontrado
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"filedatos_gtests" end time: Dec 19 14:25 CET
+"filedatos_gtests" end time: Dec 19 14:52 CET
 "filedatos_gtests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -31,7 +31,7 @@ Test Passed.
 2/4 Test: usuarioReg_gtests
 Command: "/home/javier/Escritorio/equipo406-1/build/tests/usuarioReg_test"
 Directory: /home/javier/Escritorio/equipo406-1/build/tests
-"usuarioReg_gtests" start time: Dec 19 14:25 CET
+"usuarioReg_gtests" start time: Dec 19 14:52 CET
 Output:
 ----------------------------------------------------------
 [==========] Running 1 test from 1 test suite.
@@ -48,7 +48,7 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"usuarioReg_gtests" end time: Dec 19 14:25 CET
+"usuarioReg_gtests" end time: Dec 19 14:52 CET
 "usuarioReg_gtests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -56,7 +56,7 @@ Test Passed.
 3/4 Test: filecurso_gtests
 Command: "/home/javier/Escritorio/equipo406-1/build/tests/filecurso_test"
 Directory: /home/javier/Escritorio/equipo406-1/build/tests
-"filecurso_gtests" start time: Dec 19 14:25 CET
+"filecurso_gtests" start time: Dec 19 14:52 CET
 Output:
 ----------------------------------------------------------
 [==========] Running 2 tests from 1 test suite.
@@ -75,7 +75,7 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"filecurso_gtests" end time: Dec 19 14:25 CET
+"filecurso_gtests" end time: Dec 19 14:52 CET
 "filecurso_gtests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -83,7 +83,7 @@ Test Passed.
 4/4 Test: filelogin_gtests
 Command: "/home/javier/Escritorio/equipo406-1/build/tests/filelogin_test"
 Directory: /home/javier/Escritorio/equipo406-1/build/tests
-"filelogin_gtests" start time: Dec 19 14:25 CET
+"filelogin_gtests" start time: Dec 19 14:52 CET
 Output:
 ----------------------------------------------------------
 [==========] Running 1 test from 1 test suite.
@@ -100,8 +100,8 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"filelogin_gtests" end time: Dec 19 14:25 CET
+"filelogin_gtests" end time: Dec 19 14:52 CET
 "filelogin_gtests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Dec 19 14:25 CET
+End testing: Dec 19 14:52 CET
