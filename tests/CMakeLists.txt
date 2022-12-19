@@ -28,3 +28,10 @@ add_executable(filecurso_test filecurso_test.cc)
 target_link_libraries(filecurso_test
 PRIVATE GTest::GTest filecurso curso)
 add_test(filecurso_gtests filecurso_test)
+#
+#Testing filelogin library
+add_executable(filelogin_test filelogin_test.cc)
+target_link_libraries(filelogin_test
+PRIVATE GTest::GTest filelogin)
+add_test(filelogin_gtests filelogin_test)
+#

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/filelogin_test.dir/filelogin_test.cc.o -o filelogin_test  ../src/filelogin/libfilelogin.a ../lib/libgtest_main.a ../lib/libgtest.a ../src/curso/libcurso.a 

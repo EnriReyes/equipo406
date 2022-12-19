@@ -1,0 +1,2 @@
+/usr/bin/ar qc libusuarioReg.a CMakeFiles/usuarioReg.dir/usuarioReg.cc.o
+/usr/bin/ranlib libusuarioReg.a
