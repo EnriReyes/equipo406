@@ -23,3 +23,8 @@ target_link_libraries(usuarioReg_test
 PRIVATE GTest::GTest usuarioReg)
 add_test(usuarioReg_gtests usuarioReg_test)
 #
+
+add_executable(filecurso_test filecurso_test.cc)
+target_link_libraries(filecurso_test
+PRIVATE GTest::GTest filecurso curso)
+add_test(filecurso_gtests filecurso_test)
