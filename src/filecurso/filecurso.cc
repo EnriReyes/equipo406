@@ -125,7 +125,6 @@ void File_curso::borrar_curso(std::string id){
         getline(file, aux);
         if(aux!=id) {
             v.push_back(aux);
-            std::cout<<v[i]<<"\n";
             i++;
         }
     }
