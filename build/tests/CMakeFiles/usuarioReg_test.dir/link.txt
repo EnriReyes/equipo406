@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/usuarioReg_test.dir/usuarioReg_test.cc.o -o usuarioReg_test  ../src/usuarioReg/libusuarioReg.a ../lib/libgtest_main.a ../lib/libgtest.a ../src/curso/libcurso.a 

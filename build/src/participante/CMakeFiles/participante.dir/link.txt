@@ -1,2 +1,0 @@
-/usr/bin/ar qc libparticipante.a CMakeFiles/participante.dir/participante.cc.o
-/usr/bin/ranlib libparticipante.a

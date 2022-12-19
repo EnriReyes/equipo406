@@ -1,2 +1,0 @@
-/usr/bin/ar qc libfilelogin.a CMakeFiles/filelogin.dir/filelogin.cc.o
-/usr/bin/ranlib libfilelogin.a
