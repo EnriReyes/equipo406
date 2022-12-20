@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/app_main.dir/app_main.cc.o -o app_main  ../curso/libcurso.a ../usuarioReg/libusuarioReg.a ../participante/libparticipante.a ../filedatos/libfiledatos.a ../filelogin/libfilelogin.a ../filecurso/libfilecurso.a ../admin/libadmin.a ../filecurso/libfilecurso.a ../coordCursos/libcoordCursos.a ../usuarioReg/libusuarioReg.a ../curso/libcurso.a 
