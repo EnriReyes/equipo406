@@ -1,6 +1,2 @@
-Para compilar entra a la carpeta build y ejecute los siguientes comandos de terminal:
-
-1.cmake ..
-2.make
-
-En el build, la carpeta test, pegar el fichero filedatos_test.txt que se encuentra en la carpeta test que no está dentro de la carpeta build.
+Para ejecutar los test vaya desde la terminal hacia build/tests , en esta carpeta estarán los 4 ejecutables (no tienen extensión, excepto el archivo Makefile, ese no es un ejecutable) y los documentos necesarios.
+Para ejecutar el main vaya desde la terminal hacia build/src/app , en esta carpeta se encuentra el ejecutable app_main y todo lo necesario para ejectuar el main.
