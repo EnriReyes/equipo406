@@ -1,0 +1,5 @@
+filedatos_gtests 2 0.00127217
+usuarioReg_gtests 2 0.000799463
+filecurso_gtests 2 0.0016321
+filelogin_gtests 2 0.00643119
+---
