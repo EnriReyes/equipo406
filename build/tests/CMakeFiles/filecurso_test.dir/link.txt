@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/filecurso_test.dir/filecurso_test.cc.o -o filecurso_test  ../src/filecurso/libfilecurso.a ../src/curso/libcurso.a ../lib/libgtest_main.a ../lib/libgtest.a 

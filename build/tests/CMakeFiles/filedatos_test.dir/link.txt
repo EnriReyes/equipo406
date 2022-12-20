@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/filedatos_test.dir/filedatos_test.cc.o -o filedatos_test  ../src/filedatos/libfiledatos.a ../src/usuarioReg/libusuarioReg.a ../lib/libgtest_main.a ../lib/libgtest.a ../src/filecurso/libfilecurso.a ../src/curso/libcurso.a 

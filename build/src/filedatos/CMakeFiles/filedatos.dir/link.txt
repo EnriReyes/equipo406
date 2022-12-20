@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfiledatos.a CMakeFiles/filedatos.dir/filedatos.cc.o
+/usr/bin/ranlib libfiledatos.a
